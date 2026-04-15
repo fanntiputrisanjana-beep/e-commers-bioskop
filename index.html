@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/sc/css/style.css">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#62f9ee",
+                    "on-secondary-container": "#adb6c4",
+                    "tertiary-container": "#fce363",
+                    "surface-dim": "#121317",
+                    "primary-fixed-dim": "#3cdcd1",
+                    "on-primary-container": "#00716b",
+                    "on-primary-fixed": "#00201e",
+                    "on-tertiary-container": "#736400",
+                    "background": "#121317",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#fce363",
+                    "inverse-surface": "#e3e2e8",
+                    "surface-container-highest": "#343439",
+                    "surface-variant": "#343439",
+                    "on-secondary-fixed": "#131c27",
+                    "tertiary": "#ffffff",
+                    "secondary-container": "#3e4753",
+                    "outline": "#859491",
+                    "secondary-fixed-dim": "#bec7d6",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#292a2e",
+                    "on-tertiary-fixed-variant": "#524700",
+                    "inverse-on-surface": "#2f3035",
+                    "primary": "#ffffff",
+                    "primary-fixed": "#62f9ee",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0d0e12",
+                    "on-surface": "#e3e2e8",
+                    "on-primary-fixed-variant": "#00504b",
+                    "on-secondary-fixed-variant": "#3e4753",
+                    "surface-container": "#1f1f24",
+                    "on-surface-variant": "#bacac7",
+                    "surface": "#121317",
+                    "secondary-fixed": "#dae3f2",
+                    "on-error-container": "#ffdad6",
+                    "outline-variant": "#3c4948",
+                    "surface-container-low": "#1a1b20",
+                    "tertiary-fixed-dim": "#dec74a",
+                    "on-primary": "#003734",
+                    "secondary": "#bec7d6",
+                    "inverse-primary": "#006a64",
+                    "surface-tint": "#3cdcd1",
+                    "on-secondary": "#28313c",
+                    "surface-bright": "#38393e",
+                    "on-tertiary": "#393000",
+                    "on-background": "#e3e2e8",
+                    "on-tertiary-fixed": "#211b00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#121317]/80 backdrop-blur-xl shadow-2xl flex justify-between items-center px-8 py-4 max-w-full font-['Space_Grotesk'] tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-white">CINEMA VOID</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#66FCF1] border-b-2 border-[#66FCF1] pb-1" href="index.html">Movies</a>
+<a class="text-white/70 hover:text-white transition-colors" href="movie.html">Cinemas</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Promos</a>
+<a class="text-white/70 hover:text-white transition-colors" href="chekout.html">My Tickets</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-white/5 rounded-full px-4 py-2 hover:bg-white/10 transition-all duration-300">
+<span class="material-symbols-outlined text-white/50 text-xl mr-2">search</span>
+<span class="text-white/40 text-sm">Search movies...</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#66FCF1] hover:bg-white/10 p-2 rounded-full transition-all duration-300 scale-105 active:scale-95">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</button>
+<button class="text-[#66FCF1] hover:bg-white/10 p-2 rounded-full transition-all duration-300 scale-105 active:scale-95">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section: Carousel Concept -->
+<section class="relative h-[870px] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="dramatic cinematic shot of a sci-fi landscape with glowing neon structures and deep atmospheric shadows in a futuristic city" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaTPA1uFBLO96_Amep7YeIs7kpDyk4EDVIHeTUKqFD7n7PRrFod0AlrGo2fRUwFNcARBgJAWKKG50IIuEWLIpfAMksA3jO3bSC6KyrykfMqE1RGgkuzEr8gt-6eDEMl_FsnL3ryThrU16mODBD1-Iysryn-rnR7DsNFUOol8JycZnAZO0GMennyJ2IDe75DQSLCsc3SYJwx4VQYr-UFqabs5g_7SmCRCng7vfoE6Cadd7yNqhRLLVfB66L4Rf8-HgtLvGr4S8-J5BP');">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative h-full flex flex-col justify-end px-12 pb-24 max-w-7xl mx-auto">
+<div class="flex flex-col gap-2 mb-4">
+<span class="text-primary-fixed uppercase tracking-[0.4em] font-headline text-sm font-bold">Now Playing</span>
+<h1 class="text-7xl md:text-9xl font-headline font-bold text-white tracking-tighter leading-none">NEON<br/>HORIZON</h1>
+</div>
+<p class="text-on-surface-variant max-w-xl mb-8 text-lg font-light leading-relaxed">
+                    In a world where light is the only currency, one runner must find the source of the eternal spark. A visual masterpiece by Director Aris Thorne.
+                </p>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary-container px-10 py-4 rounded-full font-headline font-bold text-lg hover:scale-105 active:scale-95 transition-transform flex items-center gap-3 shadow-[0_0_20px_rgba(60,220,209,0.3)] border border-primary-fixed-dim/20">
+                        BOOK NOW
+                        <span class="material-symbols-outlined">confirmation_number</span>
+</button>
+<button class="bg-surface-container-high/60 backdrop-blur-md text-white px-10 py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-container-highest transition-all border border-white/10">
+                        TRAILER
+                    </button>
+</div>
+<!-- Carousel Indicators -->
+<div class="absolute right-12 bottom-24 flex flex-col gap-4">
+<div class="w-1 h-12 bg-primary-fixed rounded-full"></div>
+<div class="w-1 h-8 bg-white/20 rounded-full"></div>
+<div class="w-1 h-8 bg-white/20 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Location Sub-header -->
+<section class="bg-surface-container-low/50 backdrop-blur-sm border-y border-white/5 py-6 px-12 sticky top-20 z-40">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-3 group cursor-pointer">
+<span class="material-symbols-outlined text-primary-fixed">location_on</span>
+<span class="text-white/60 font-label uppercase tracking-widest text-xs">Viewing Times For:</span>
+<div class="flex items-center gap-2">
+<span class="text-white font-headline text-lg font-bold">London - West End</span>
+<span class="material-symbols-outlined text-primary-fixed text-sm">expand_more</span>
+</div>
+</div>
+<div class="flex gap-8 overflow-x-auto pb-2 no-scrollbar w-full md:w-auto">
+<button class="text-primary-fixed font-headline font-bold whitespace-nowrap">TODAY</button>
+<button class="text-white/40 hover:text-white transition-colors font-headline font-bold whitespace-nowrap">THU 24</button>
+<button class="text-white/40 hover:text-white transition-colors font-headline font-bold whitespace-nowrap">FRI 25</button>
+<button class="text-white/40 hover:text-white transition-colors font-headline font-bold whitespace-nowrap">SAT 26</button>
+<button class="text-white/40 hover:text-white transition-colors font-headline font-bold whitespace-nowrap">SUN 27</button>
+</div>
+</div>
+</section>
+<!-- Movie Grid Section -->
+<section class="max-w-7xl mx-auto px-12 py-20">
+<div class="flex justify-between items-end mb-12">
+<div class="flex flex-col gap-1">
+<h2 class="text-4xl font-headline font-bold text-white tracking-tight">FEATURED FILMS</h2>
+<div class="h-1 w-20 bg-primary-fixed"></div>
+</div>
+<button class="text-primary-fixed-dim font-headline font-bold text-sm tracking-widest flex items-center gap-2 group">
+                    VIEW ALL MOVIES
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Movie Card 1 -->
+<div class="group relative aspect-[2/3] rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img alt="" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="dramatic vertical movie poster of a dark hooded figure in a futuristic rain-slicked city with neon highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXusGqfHlu0OdBeCVvniOAOXIov04uPs3ZXsSccEhTDF7ejX38U5LIoharEkuRd5Tm6SFqVxa-lxJLpV2cSqDu-5ch_GmsWE0FSM_m2cB8VW7GbKQpK4HxGdpumbF8t5zExqlYqAxXmzkfaGw7rmqMJNX8UN1WS2x975VhNVozZ8d8rWhPqZpFdNNddJ_feeN3CVcJfnyIVTogaD085J1EOQIMGal8Hb77YUCJtZ3MaiOskcbdqTqjKn8QStAJk8Gl9wrtEP-88vZu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="bg-primary-fixed text-on-primary-fixed px-2 py-0.5 text-[10px] font-bold rounded mb-2 inline-block">PREMIUM LARGE FORMAT</span>
+<h3 class="text-2xl font-headline font-bold text-white leading-tight">THE SILENT VOID</h3>
+<div class="flex items-center gap-4 mt-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+<button class="bg-white text-on-primary-container px-4 py-2 rounded-full text-xs font-bold font-headline w-full">TICKETS</button>
+</div>
+</div>
+</div>
+<!-- Movie Card 2 -->
+<div class="group relative aspect-[2/3] rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img alt="" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="abstract vertical cinema poster featuring monochromatic silhouettes and sharp directional lighting with dust motes in the air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcOkiFuj3SlTrsAZKV0PCfBBWS2H85-_j44xSVivaoMR1U77DMz_K6BuYgdQDpczKGTYuk6qCVRrpTyti-5B_KxRrBEhuwx4E3zsA5X2h8sRo1UB1W0iLxAFfOCFxXfokkyqMOgZNtCy75EpopX5HUcSx8SGZLEkmhCIoogNrRYJLZmylqnIRqSwksjBQkB72XIiEu24ejXRD0t8M97UkkqRKMIaWdTLD4E_4571MIW_O2UUcRbWaK5TXWfJNtACyh190qwUJIrBEM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="bg-primary-fixed text-on-primary-fixed px-2 py-0.5 text-[10px] font-bold rounded mb-2 inline-block">120 MINS</span>
+<h3 class="text-2xl font-headline font-bold text-white leading-tight">ECHO CHAMBER</h3>
+<div class="flex items-center gap-4 mt-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+<button class="bg-white text-on-primary-container px-4 py-2 rounded-full text-xs font-bold font-headline w-full">TICKETS</button>
+</div>
+</div>
+</div>
+<!-- Movie Card 3 -->
+<div class="group relative aspect-[2/3] rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img alt="" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="close-up of a person's eye reflecting a cosmic nebula with bright stars and vibrant purple and blue clouds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxFzxju2Mlw_OJXyAKrO-IhtmRvIAm9h0jsyoJIMiuawG_EN8NIUPfNbBcH8uK7Mfnp2GKnPKIErr2I3K0v_iS9iSsxHDZnf-GERHjyCt8GVjlKXXIej2CWBFLs2VwAGxNXg7LX4AESuviOass-gyPvPrvwd-r3o0f1rCBm6QXawWW9T2BOCtLjqksi4JK-_Il0jRtARafalhYnhDfBPVlkzZLqJVP9RyVQLaoDCYMfD1Xuevr2asT6TcxWWiI9l1wavw4wOa3lO7l"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="bg-primary-fixed text-on-primary-fixed px-2 py-0.5 text-[10px] font-bold rounded mb-2 inline-block">IMAX EXPERIENCES</span>
+<h3 class="text-2xl font-headline font-bold text-white leading-tight">STARDUST</h3>
+<div class="flex items-center gap-4 mt-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+<button class="bg-white text-on-primary-container px-4 py-2 rounded-full text-xs font-bold font-headline w-full">TICKETS</button>
+</div>
+</div>
+</div>
+<!-- Movie Card 4 -->
+<div class="group relative aspect-[2/3] rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img alt="" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="urban night scene with blurred traffic lights creating long streaks of cyan and magenta light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEXrIRrmmW5_bH67M4Eud-x8KoQGIjFZ8B6woeUw3ETJ7aXwJ5z6VR2KzgSp22A_iBLoVzfr9XM54fuNgtfkbVP6IA8dQe6yTxHL1lXdgoSkirOWWfSxVJvWngEFS40E9YkfXBhYWreqU6rs5nsaGXvN_uUQiNaRAlMq6e8qpnmK3nTIilL5TJOxE9GhR5D6cI_2Y5gAd9vSus-8Ys8h2-jIRLVGGoqOCjvUzUddSr0Fu0iOPQBLar8oygOxAZjAkfmzjDNlz1sZae"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="bg-primary-fixed text-on-primary-fixed px-2 py-0.5 text-[10px] font-bold rounded mb-2 inline-block">NEW RELEASE</span>
+<h3 class="text-2xl font-headline font-bold text-white leading-tight">STREET PULSE</h3>
+<div class="flex items-center gap-4 mt-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+<button class="bg-white text-on-primary-container px-4 py-2 rounded-full text-xs font-bold font-headline w-full">TICKETS</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Promos Section: Bento Layout -->
+<section class="bg-surface-container-lowest py-24">
+<div class="max-w-7xl mx-auto px-12">
+<div class="flex flex-col gap-1 mb-16 items-center text-center">
+<span class="text-primary-fixed uppercase tracking-[0.5em] font-headline text-xs font-bold">Member Perks</span>
+<h2 class="text-5xl font-headline font-bold text-white tracking-tight mt-2">CURRENT PROMOS</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-6 grid-rows-2 gap-6 h-[600px]">
+<!-- Large Promo Card -->
+<div class="md:col-span-3 md:row-span-2 bg-surface-container-high rounded-xl overflow-hidden relative group">
+<img alt="" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="glowing popcorn machine with kernels flying in slow motion against a dark theatrical background with neon teal highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9_68LrbAB2uoRp4mEpKiZbrJlJL4qZnWVOROU_dLoqhWF7kMMsDzn83B2r6yoX1zGItpNof8P7gLrK86qkPpFivlnIislM3sKe1sWtG0_JPPi5zP3ZBrC6zh1ibhYXT1KjDANo757-kEKr_wphnZ686ji6MjxaEWiUnl-3VyrAFurDxH01Rcnnpj8yYtld4NisJzkV4Q-I3rW9A1_hDLdCMWXWfWhjmMKe6mnksq4r8nGbRCjc145Em5Y_WlZczJZ5AHnerBSHQj_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-10">
+<h3 class="text-4xl font-headline font-bold text-white mb-2">Popcorn Combo</h3>
+<p class="text-on-surface-variant max-w-sm mb-6">Upgrade to a Large Combo for the price of a Medium every Tuesday.</p>
+<button class="bg-primary-fixed text-on-primary-fixed w-fit px-8 py-3 rounded-full font-headline font-bold text-sm tracking-widest hover:shadow-[0_0_20px_rgba(60,220,209,0.5)] transition-all">REDEEM NOW</button>
+</div>
+</div>
+<!-- Medium Promo Card -->
+<div class="md:col-span-3 md:row-span-1 bg-surface-container-high rounded-xl overflow-hidden relative group">
+<img alt="" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="happy family silhouettes against a brightly lit cinema screen in a dark theater hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf7mUq7jhJsXUrbkC1FMfOx_D6TvI20URYKzEGZYTbgpv49vO0-kOvZn_oPpTEIXqorH4gf_ccTD6D5go02-vppQU4oVC95PV8GOy-PemgFT5ywrhX9r3rd1kcrc34xrMhQRlsOd73vHMniNwcrbIk-gj8chQ-KLxN_jBHqowb48nkZM2vwcWS1KGaeiT24w708v9S3YvCH8OojqvWbBMRuU5IaxarrRE033XqLcpfTb45ik9DgrC7lSL1lm1khE3gY84zdfac9n5k"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="relative h-full flex flex-col justify-center p-10">
+<h3 class="text-3xl font-headline font-bold text-white mb-1">Family Discount</h3>
+<p class="text-on-surface-variant max-w-xs mb-4">4 Tickets, 4 Drinks, 2 Popcorns for only $49.</p>
+<span class="text-primary-fixed font-headline font-bold text-xs tracking-widest cursor-pointer">LEARN MORE →</span>
+</div>
+</div>
+<!-- Small Promo Card 1 -->
+<div class="md:col-span-1.5 md:row-span-1 bg-[#1F2833] rounded-xl p-8 flex flex-col justify-between border border-white/5 group hover:border-primary-fixed/30 transition-all">
+<span class="material-symbols-outlined text-primary-fixed text-4xl">loyalty</span>
+<div>
+<h4 class="text-xl font-headline font-bold text-white mb-1">Void Points</h4>
+<p class="text-white/40 text-xs">Earn 10 points for every dollar spent.</p>
+</div>
+</div>
+<!-- Small Promo Card 2 -->
+<div class="md:col-span-1.5 md:row-span-1 bg-primary-fixed rounded-xl p-8 flex flex-col justify-between group hover:shadow-[0_0_30px_rgba(60,220,209,0.3)] transition-all">
+<span class="material-symbols-outlined text-on-primary-fixed text-4xl">local_activity</span>
+<div>
+<h4 class="text-xl font-headline font-bold text-on-primary-fixed mb-1">Student 2-for-1</h4>
+<p class="text-on-primary-fixed/60 text-xs font-bold uppercase tracking-tighter">Valid Mon-Wed</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 mt-20 bg-[#121317] flex flex-col items-center gap-6 px-4 font-['Inter'] uppercase tracking-widest text-xs">
+<div class="flex flex-wrap justify-center gap-10">
+<a class="text-white/40 hover:text-[#66FCF1] transition-opacity" href="#">Privacy Policy</a>
+<a class="text-white/40 hover:text-[#66FCF1] transition-opacity" href="#">Terms of Service</a>
+<a class="text-white/40 hover:text-[#66FCF1] transition-opacity" href="#">Support</a>
+<a class="text-white/40 hover:text-[#66FCF1] transition-opacity" href="#">Careers</a>
+</div>
+<div class="flex gap-6 my-4">
+<span class="material-symbols-outlined text-white/20 cursor-pointer hover:text-primary-fixed transition-colors">brand_awareness</span>
+<span class="material-symbols-outlined text-white/20 cursor-pointer hover:text-primary-fixed transition-colors">camera_outdoor</span>
+<span class="material-symbols-outlined text-white/20 cursor-pointer hover:text-primary-fixed transition-colors">movie_filter</span>
+</div>
+<p class="text-white/40 text-center max-w-md leading-relaxed">
+            © 2024 CINEMA VOID. THE CINEMATIC EXPERIENCE REDEFINED.
+        </p>
+</footer>
+</body></html>
