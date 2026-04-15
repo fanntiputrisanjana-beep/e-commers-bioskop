@@ -1,0 +1,18 @@
+.material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow {
+            box-shadow: 0px 0px 15px rgba(60, 220, 209, 0.4);
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 15px rgba(60, 220, 209, 0.4);
+        }
+        .seat-grid-curve {
+            perspective: 1000px;
+        }
+        .seat-row {
+            transform: rotateX(20deg);
+        }
+        .screen-glow {
+            box-shadow: 0 -10px 40px rgba(102, 252, 241, 0.2);
+        }
